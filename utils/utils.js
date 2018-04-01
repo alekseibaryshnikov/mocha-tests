@@ -1,6 +1,10 @@
 module.exports.add = (a, b) => a + b;
 
-module.exports.square = (x) => x * x;
+module.exports.square = (x, callback) => {
+    setTimeout(() => {
+        callback(x * x);
+    }, 1000);
+};
 
 module.exports.addName = (user, fullName) => {
     let fullNameSplit = fullName.split(' ');

@@ -6,9 +6,11 @@ it ('should add two numbers', () => {
     expect(res).toBe(55).toBeA('number');
 });
 
-it ('should return square', () => {
-    let res = utils.square(11);
-    expect(res).toBe(121).toBeA('number');
+it ('should return square of number', (done) => {
+    utils.square(11, (res) => {
+        expect(res).toBe(121).toBeA('number');
+        done();
+    });
 });
 
 it ('should set firstName and lastName', () => {
