@@ -11,3 +11,14 @@ it ('should return square', () => {
     expect(res).toBe(121).toBeA('number');
 });
 
+it ('should set firstName and lastName', () => {
+    let user = {
+        age: 30,
+        location: 'Moscow'
+    };
+    let res = utils.addName(user, "Aleksei Baryshnikov");
+    expect(res).toInclude({
+        firstName: "Aleksei",
+        lastName: "Baryshnikov"
+    });
+});
