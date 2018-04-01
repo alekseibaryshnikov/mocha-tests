@@ -6,7 +6,7 @@ it ('should add two numbers', () => {
     expect(res).toBe(55).toBeA('number');
 });
 
-it ('should return square of number', (done) => {
+it ('should square a number', (done) => {
     utils.square(11, (res) => {
         expect(res).toBe(121).toBeA('number');
         done();
